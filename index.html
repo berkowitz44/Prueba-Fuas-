@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>index.html</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" href="estilo.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+  <link rel="stylesheet" href="webservice.js">
+  <script type="text/javascript">
+    $(document).ready(function () {
+    });
+  </script>
+  <script type="text/javascript">
+    function validar() {
+      var usuario = document.getElementById("usuario").value;
+      var Email = document.getElementById("Email").value;
+
+      if (usuario == "admin123" && Email == "admin@duoc.cl") {
+        alert("Usuario y Email validos");
+        location.href = "page.html"
+      }
+      else {
+        alert("Datos Incorrectos");
+      }
+    }
+
+
+  </script>
+</head>
+
+<body class="index">
+  <div class="container">
+    <div class="row">
+
+      <div>
+        <h1 class="centrado">Login</h1>
+      </div>
+
+
+    </div>
+
+   
+      <table>
+        <tr>
+          <td><label>Usuario: </label></td>
+          <td><input type="text" name="usuario" id="usuario"></td>
+        </tr>
+        <tr>
+          <td><label>Correo: </label></td>
+          <td><input type="text" name="Email" id="Email"></td>
+        </tr>
+        <p>
+          <td colspan="2"><input type="button" name="btnVerifivaca" id="btnVerifica" onclick="validar()" value="Login"> </td> 
+          <td><input type="reset" ></td>    
+        </p>
+      </table>
+    
+  </div>
+</body>
+
+</html>
